@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="appointment" namespace="/appointment" extends="base-package">
+        <action name="*" class="appointmentController" method="{1}">
+            <interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">104857600</param>
+                <param name="fileUpload.allowedTypes">image/png,image/jpg,image/jpeg,image/bmp,image/gif</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp,.jpeg</param>
+            </interceptor-ref>
+            <result name="success" type="json"/>
+            <result name="saveAppointment" type="json"/>
+            <result name="pagerAppointment" type="json"/>
+            <result name="statusAppointment" type="json"/>
+            <result name="deleteAppointment" type="json"/>
+        </action>
+    </package>
+</struts>

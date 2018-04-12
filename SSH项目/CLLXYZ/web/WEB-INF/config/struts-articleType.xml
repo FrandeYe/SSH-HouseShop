@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="articleType" namespace="/articleType" extends="base-package">
+        <action name="*" class="articleTypeController" method="{1}">
+            <result name="success" type="json"/>
+            <result name="saveArticleType" type="json"/>
+            <result name="statusArticleType" type="json"/>
+            <result name="pagerArticleType" type="json"/>
+            <result name="foundTypename" type="json"/>
+        </action>
+    </package>
+</struts>

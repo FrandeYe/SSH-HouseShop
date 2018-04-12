@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="House" table="t_house">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" />
+        <property name="logo"/>
+        <property name="intro"/>
+        <property name="area" />
+        <property name="unit_price"/>
+        <property update="false" name="created_time"/>
+        <property name="status" />
+
+        <!-- 一个户型只能对应一个楼盘-->
+        <many-to-one name="buildings" column="buildings_id" class="Buildings"></many-to-one>
+        <many-to-one update="false" name="agency" column="agency_id" class="Agency"></many-to-one>
+
+        <!--<set name="appointments">
+            <key column="house_id"></key>
+            <one-to-many class="Appointment"></one-to-many>
+        </set>
+        &lt;!&ndash;户型与房号，一对多&ndash;&gt;
+            <set name="rooms">
+                <key column="house_id"></key>
+                <one-to-many class="com.ht.bean.Room"></one-to-many>
+            </set>-->
+    </class>
+
+</hibernate-mapping>

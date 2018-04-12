@@ -1,0 +1,30 @@
+.pageMainWrap{
+    width:80%;
+    background-color:coral;
+   margin-left: 17%;
+}
+
+.advs{
+    margin-top: 100px;
+}
+
+.advs img{
+    width: 180px;
+    height:100px;
+}
+
+.in{
+    float: left;
+}
+
+.viewHead h2{
+    color:cornflowerblue;
+}
+
+.viewBody h5{
+    color:#cd4a02;
+}
+.viewBody img{
+    width: 96%;
+    height: 60%;
+}

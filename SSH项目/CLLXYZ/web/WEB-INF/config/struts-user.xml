@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+	<package name="user111" namespace="/user" extends="base-package">
+			<action name="*" class="userController" method="{1}">
+				<result name="success" type="json"></result>
+				<result name="fail" type="json"></result>
+				<result name="showUserIndex">/user/user_index.jsp</result>
+				<result name="showUserLogin">/user/login.jsp</result>
+				<result name="showUserRegister">/reg_page/user_reg.jsp</result>
+				<result name="showIndex">/home.jsp</result>
+				<result name="showArticle">/index_page/article/index_article.jsp</result>
+				<result name="showArticles">/index_page/article/index_articles.jsp</result>
+				<result name="basicInfoSuccess">/user/user_basicInfo.jsp</result>
+				<result name="input">/user/user_updateIcon.jsp</result>
+			</action>
+	</package>
+
+</struts>

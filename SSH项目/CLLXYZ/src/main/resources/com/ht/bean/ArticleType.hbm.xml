@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="ArticleType" table="t_article_type">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" />
+        <property name="des"/>
+        <property name="status"/>
+
+        <set name="articles">
+            <key column="type_id"></key>
+            <one-to-many class="Article"></one-to-many>
+        </set>
+
+    </class>
+
+</hibernate-mapping>

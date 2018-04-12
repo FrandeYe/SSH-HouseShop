@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="History" table="t_history">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="created_time" />
+
+        <!--一个用户对应多条历史记录,多条历史记录对应一个用户-->
+        <many-to-one name="user" column="user_id" class="com.ht.bean.User"></many-to-one>
+
+        <!--一个楼盘可以有多个历史记录，一个历史记录只能对应一个楼盘-->
+        <many-to-one name="buildings" column="buildings_id" class="com.ht.bean.Buildings"></many-to-one>
+
+
+    </class>
+
+</hibernate-mapping>

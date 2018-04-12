@@ -1,0 +1,10 @@
+#areaSelect_block a{
+    margin-left: 25px;
+    font-size: 15px;
+}
+#areaSelect_block a:hover{
+    color: red;
+}
+#areaSelect_block a:active{
+   color: yellow;
+}

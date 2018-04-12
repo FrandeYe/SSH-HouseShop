@@ -1,0 +1,25 @@
+a:link,a:visited {
+    text-decoration: none;
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+    color:green;
+}
+
+a:active {
+    text-decoration: none;
+    color:red;
+}
+
+#nav ul li{
+    margin-left: 20px;
+}
+.dropdown-menu li{
+    margin-left: 0;
+    text-align: left;
+}
+.form-group{
+    float: left;
+}

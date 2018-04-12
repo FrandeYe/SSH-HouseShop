@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Message" table="t_message">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="content" />
+        <property name="reply" />
+        <property name="leave_time" />
+        <property name="reply_time" />
+        <property name="status" />
+
+        <!--一个用户对应多条留言,多条留言对应一个用户-->
+        <many-to-one name="user" column="user_id" class="com.ht.bean.User"></many-to-one>
+
+        <!--一个楼盘可以有多条留言，一个留言只能对应一个楼盘-->
+        <many-to-one name="buildings" column="buildings_id" class="com.ht.bean.Buildings"></many-to-one>
+        <many-to-one name="agency" column="agency_id" class="com.ht.bean.Agency"></many-to-one>
+
+    </class>
+
+    </hibernate-mapping>

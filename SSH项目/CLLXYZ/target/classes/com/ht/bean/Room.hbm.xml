@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Room" table="t_room">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" />
+        <property name="sale_status" />
+
+        <one-to-one  name="sale" class="Sale" property-ref="room"></one-to-one>
+        <!--room与house,多对一-->
+        <many-to-one name="house" class="House" column="house_id"></many-to-one>
+        <many-to-one name="building" class="Building" column="building_id"></many-to-one>
+    </class>
+
+</hibernate-mapping>

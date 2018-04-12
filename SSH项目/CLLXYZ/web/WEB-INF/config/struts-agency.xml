@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+	<package name="agency" namespace="/agency" extends="base-package">
+			<action name="*" class="agencyController" method="{1}">
+				<result name="success" type="json"/>
+				<result name="fail" type="json"/>
+				<result name="showAlterAgency" >/agency/agency_baseMessage.jsp</result>
+				<result name="foundUncheckedAgencies" type="json"/>
+				<result name="showAgencyLogin">/agency/agency_login.jsp</result>
+				<result name="showAgencyRegister">/reg_page/agency_reg.jsp</result>
+				<result name="showAgencyIndex">/agency/agency_index.jsp</result>
+				<result name="showIndex">/home.jsp</result>
+				<result name="showAgencyAll">/index_page/agency/all_agency.jsp</result>
+				<result name="foundCheckedAgencies" type="json"/>
+				<result name="checkedAgencies" type="json"/>
+				<result name="UncheckedAgencies" type="json"/>
+			</action>
+	</package>
+
+</struts>

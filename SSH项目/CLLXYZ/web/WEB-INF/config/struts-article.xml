@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="article" namespace="/article" extends="base-package">
+        <action name="*" class="articleController" method="{1}">
+            <result name="success" type="json"/>
+            <result name="adminArticleDetail">/admin/admin_article_detail.jsp</result>
+            <result name="adminArticleEdit">/admin/admin_article_edit.jsp</result>
+            <result name="articleImg" type="json"/>
+            <result name="showArticles">/index_page/article/index_articles.jsp</result>
+            <result name="showArticleInfo">/index_page/article/article_info.jsp</result>
+        </action>
+    </package>
+</struts>

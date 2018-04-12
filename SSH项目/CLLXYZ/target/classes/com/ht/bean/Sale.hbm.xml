@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Sale" table="t_sale">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="sale_time" />
+        <property name="unit_price" />
+        <property name="discount" />
+        <property name="total_cost" />
+        <property name="created_time" />
+        <property name="status" />
+
+        <!--销售记录与员工，多对一关系-->
+        <many-to-one name="employee" column="emp_id" class="com.ht.bean.Employee"></many-to-one>
+        <!--销售记录与客户，多对一关系-->
+        <many-to-one name="customer" column="customer_id" class="com.ht.bean.Customer"></many-to-one>
+        <!--销售记录与经销商，多对一关系-->
+        <many-to-one name="agency" column="agency_id" class="com.ht.bean.Agency"></many-to-one>
+        <!--销售记录与房号表，一对一关系 Sale类型，表达的是本类与IdCard的一对一的关系
+        采用基于外键的方式  本方有外键方  实际上是多对一-->
+        <many-to-one name="room" class="com.ht.bean.Room" unique="true" column="room_id"></many-to-one>
+    </class>
+
+</hibernate-mapping>

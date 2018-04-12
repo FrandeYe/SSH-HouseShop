@@ -1,0 +1,27 @@
+/**
+给经销商图片设置样式
+ */
+#img_block img{
+    text-align: center;
+    height:180px;
+    width:230px;
+    margin-top: 15px;
+}
+#img_block div{
+    width:270px;
+    height:265px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+/**
+a标签
+ */
+#img_block a:hover, a:active{
+    color: #ff798f;
+    text-decoration: none;
+    font-size: 15px;
+}
+#img_block img:hover{
+    width:250px;
+    height: 190px;
+}

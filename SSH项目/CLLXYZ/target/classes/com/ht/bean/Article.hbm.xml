@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Article" table="t_article">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="title" />
+        <property name="abstracts"/>
+        <property name="content" />
+        <property name="logo" />
+        <property name="created_time" />
+        <property name="status" />
+
+        <!--文章与文章类型，多对一 -->
+        <many-to-one name="articleType" class="ArticleType" column="type_id"></many-to-one>
+    </class>
+</hibernate-mapping>

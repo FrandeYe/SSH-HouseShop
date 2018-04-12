@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+    <package name="activity" namespace="/activity" extends="base-package">
+        <action name="*" class="activityController" method="{1}">
+            <result name="success" type="json"/>
+            <result name="showActivities">/index_page/activity/all_activity.jsp</result>
+            <result name="showActivityInfo">/index_page/activity/activity_info.jsp</result>
+        </action>
+    </package>
+
+</struts>

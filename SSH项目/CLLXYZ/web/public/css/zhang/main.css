@@ -1,0 +1,98 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+a:link,a:visited {
+    text-decoration: none;
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+    color:green;
+}
+
+a:active {
+    text-decoration: none;
+    color:red;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+#top {
+    height:80px;
+}
+
+#footer {
+    height:60px;
+}
+
+#menu {
+    width:250px;
+}
+
+#menu ul li {
+    margin:10px auto 10px 60px;
+}
+
+.tree-ul li {
+    margin:10px auto 10px 0px;
+}
+
+#logo {
+    float:left;
+}
+
+#logo img {
+    width:150px;
+    height:78px;
+}
+
+#welcome {
+    font-size:14px;
+    float:right;
+    margin-right:20px;
+    height:78px;
+    line-height:78px;
+}
+
+.small-win, .small-dlg {
+    width:300px;
+    height:200px;
+}
+
+.normal-win, .normal-dlg {
+    width:500px;
+    height:300px;
+}
+
+.large-win, .large-dlg {
+    width:600px;
+    height:400px;
+}
+
+.my-panel {
+    margin-bottom:20px;
+}
+
+.small-textbox {
+    width:200px;
+    height:100px;
+}
+
+.normal-textbox {
+    width:300px;
+    height:200px;
+}
+
+.large-textbox {
+    width:400px;
+    height:300px;
+}
+
+.normal-select {
+    width:200px;
+}

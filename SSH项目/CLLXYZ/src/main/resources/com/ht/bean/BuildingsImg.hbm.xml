@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="BuildingsImg" table="t_buildings_img">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="img_path" />
+        <property name="img_des"/>
+        <property update="false" name="created_time"/>
+
+        <many-to-one update="false" name="buildings" column="buildings_id" class="Buildings"/>
+    </class>
+
+</hibernate-mapping>

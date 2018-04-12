@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Agency" table="t_agency">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" />
+        <property name="email"/>
+        <property name="pwd" />
+        <property name="leader" />
+        <property name="phone" />
+        <property name="tel" />
+        <property name="address" />
+        <property name="logo" />
+        <property name="intro" />
+        <property update="false" name="created_time" />
+        <property name="checked_status" />
+        <property name="status" />
+
+        <many-to-one update="false" name="role" column="role_id" class="Role"/>
+
+        <!--&lt;!&ndash; 经销商与楼盘的 一对多关系&ndash;&gt;-->
+        <!--<set name="buildings">-->
+            <!--<key column="agency_id"></key>-->
+            <!--<one-to-many class="Buildings"></one-to-many>-->
+        <!--</set>-->
+        <!--&lt;!&ndash; 经销商与员工的 一对多关系&ndash;&gt;-->
+        <!--<set name="employees">-->
+            <!--<key column="agency_id"></key>-->
+            <!--<one-to-many class="com.ht.bean.Employee"></one-to-many>-->
+        <!--</set>-->
+        <!--&lt;!&ndash;经销商与客户，一对多&ndash;&gt;-->
+        <!--<set name="customers">-->
+            <!--<key column="agency_id">-->
+            <!--</key>-->
+            <!--<one-to-many class="Customer"></one-to-many>-->
+        <!--</set>-->
+        <!--&lt;!&ndash;经销商与预约&ndash;&gt;-->
+        <!--<set name="appointments">-->
+            <!--<key column="agency_id"></key>-->
+            <!--<one-to-many class="com.ht.bean.Appointment"></one-to-many>-->
+        <!--</set>-->
+         <!--&lt;!&ndash;经销商与销售记录，一对多&ndash;&gt;-->
+        <!--<set name="sales">-->
+            <!--<key column="agency_id"></key>-->
+            <!--<one-to-many class="com.ht.bean.Sale"></one-to-many>-->
+        <!--</set>-->
+    </class>
+
+</hibernate-mapping>

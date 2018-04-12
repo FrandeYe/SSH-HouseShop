@@ -1,0 +1,8 @@
+/**
+ ye
+ 给index.jsp页面图面添加样式
+ */
+#buildings-img img{
+    width:270px;
+    height:200px;
+}

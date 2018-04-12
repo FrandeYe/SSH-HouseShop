@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="User" table="t_user">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="email" />
+        <property name="phone" />
+        <property name="pwd" />
+        <property name="qq" />
+        <property name="gender" />
+        <property name="wechat" />
+        <property name="birthday" />
+        <property name="nickname" />
+        <property name="name" />
+        <property name="headicon" />
+        <property name="status" />
+
+        <!--<set name="appointments">-->
+            <!--<key column="user_id"></key>-->
+            <!--<one-to-many class="com.ht.bean.Appointment"></one-to-many>-->
+        <!--</set>-->
+        <!--6，一个用户对应一个角色-->
+        <many-to-one name="role" column="role_id" class="Role"></many-to-one>
+    </class>
+</hibernate-mapping>

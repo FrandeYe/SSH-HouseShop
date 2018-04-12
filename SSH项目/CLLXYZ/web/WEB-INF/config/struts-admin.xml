@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+	<package name="admin" namespace="/admin" extends="base-package">
+			<action name="*" class="adminController" method="{1}">
+				<result name="success" type="json"/>
+				<result name="fail" type="json"/>
+				<result name="pagerAgency" type="json"></result>
+				<result name="showAdminIndex">/admin/admin_index.jsp</result>
+				<result name="showAdminLogin">/admin/admin_login.jsp</result>
+			</action>
+	</package>
+
+</struts>

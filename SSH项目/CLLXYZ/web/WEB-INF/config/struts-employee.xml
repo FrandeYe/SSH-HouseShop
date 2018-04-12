@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+	<package name="employee" namespace="/employee" extends="base-package">
+			<action name="*" class="employeeController" method="{1}">
+				<result name="success" type="json"/>
+				<result name="fail" type="json"/>
+				<result name="showAlterPage">/agency/agency_alterEmp.jsp</result>
+				<result name="login">/employee/emp_index.jsp</result>
+				<result name="showEmployeeLogin">/employee/emp_login.jsp</result>
+				<result name="showEmployeeIndex">/employee/emp_index.jsp</result>
+				<result name="showAgencyDetailIndex">/index_page/agency/agency_info.jsp</result>
+			</action>
+	</package>
+
+</struts>

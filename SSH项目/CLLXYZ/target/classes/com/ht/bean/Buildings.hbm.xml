@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Buildings" table="t_buildings">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" />
+        <property name="area"/>
+        <property name="address"/>
+        <property name="floor_area"/>
+        <property name="building_area"/>
+        <property name="house_type"/>
+        <property name="building_type"/>
+        <property name="longitude" />
+        <property name="latitude"/>
+        <property name="avg_price"/>
+        <property name="company"/>
+        <property name="open_date"/>
+        <property name="total_rooms"/>
+        <property name="reception_address"/>
+        <property name="tel"/>
+        <property name="green_ratio"/>
+        <property name="plot_ratio"/>
+        <property name="property_company"/>
+        <property name="property_fee"/>
+        <property name="car_station"/>
+        <property name="traffic"/>
+        <property name="equipments"/>
+        <property name="logo"/>
+        <property name="intro"/>
+        <property name="created_time" update="false"/>
+        <property name="status"/>
+
+        <!-- 经销商与楼盘的 一对多关系-->
+        <many-to-one update="false" name="agency" column="agency_id" class="Agency"></many-to-one>
+
+    </class>
+
+</hibernate-mapping>

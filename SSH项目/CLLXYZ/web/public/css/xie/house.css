@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+/*=====================(清除浮动)=====================*/
+.houseListA,.houseListItem,.usedListItem,.houseTool,.hiName,.sideNewHouse li,.sidePicHouse li{zoom: 1;}
+.houseListA:after,.houseListItem:after,.usedListItem:after,.houseTool:after,.hiName:after,.sideNewHouse li:after,.sidePicHouse li:after
+{clear: both;content: "\0020";display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}
+/*=====================(标签底色共用)=====================*/
+.hit1{ background:#AAC677;}.hit2{ background:#9BCEE3;}.hit3{ background:#FCA863;}.hit4{ background:#BD9BC6;}.hit5{ background:#FF9393;}
+/*=====================(服务咨询)=====================*/
+.houseSv{height:303px; overflow:hidden;}
+.houseSv span{ clear:both; display:block;}
+.houseSv span a{ padding:17px 10px;}
+/*=====================(楼盘列表)=====================*/
+/*工具栏*/
+.houseTool{ clear:both; height:38px; margin-bottom:20px; overflow:hidden; background:#FFF;}
+.houseToolLeft{float:left; width:450px;}
+.houseToolLeft span,.houseToolLeft em{ float:left; width:120px; text-align:center; border-right:1px solid #F1F1F1;}
+.houseToolLeft a{ display:block; height:38px; line-height:38px; padding:0 10px; font-size:14px; color:#555;}
+.houseToolLeft a:hover{ color:#FFF; background:#00D9EA;}
+.houseToolLeft span.current a{ color:#FFF; background:#00A3E0;}
+.houseToolRight{float:right; width:230px;}
+.houseToolRight div{ float:right; width:150px; margin:0;font-size:0;}
+.houseToolRight .mod-dropdownlist .dropdown-select{ height:38px; line-height:38px;}
+.houseToolRight .mod-dropdownlist .dropdown-select,
+.houseToolRight .mod-dropdownlist .dropdown-select:visited,
+.houseToolRight .mod-dropdownlist .dropdown-select:hover,
+.houseToolRight .mod-dropdownlist .dropdown-select:active { border:0; border-left:1px solid #E5E5E5;}
+/**/
+/*项目*/
+.houseListA{ clear:both; width:930px;*margin-bottom:20px; display:block;}
+.houseListB{ clear:both; display:none;}
+.houseBox .digg{ margin-bottom:20px;}
+/*项目*/
+.houseListA .houseListItem,.houseListA .usedListItem{ float:left; width:287px; height:315px; margin:0 20px 20px 0; overflow:hidden; position:relative; background:#FFF;}
+.houseListA .houseListItem:hover,.houseListA .usedListItem:hover{ background:#FFFFE6;}
+
+.houseListA .imgShop{ position:absolute; bottom:0; left:0;width:320px;}
+.houseListA .imgShop span{ float:left;width:96px;line-height:30px; margin-right:1px;position:relative;border-bottom:1px solid #DDE3EA;}
+.houseListA .imgShop a{display:block; text-align:center; color:#7E8A9E;background:#F8F8F8;}
+.houseListA .imgShop a:hover{ color:#F50; background:#FFF;}
+.houseListA .imgShop b{ width:100%; height:0; text-align:center; line-height:100%; overflow:hidden; position:absolute;top:0; left:0; color:#F90;}
+/*模块排列*/
+.hiPic{ clear:both; height:187px; overflow:hidden; position:relative;}.hiPic img{ width:100%;}
+.hiPic span{ position:absolute;bottom:0; left:0; height:30px; width:100%; line-height:30px;background-color: rgba(0,0,0,0.5);*background-color:#555;}
+.hiPic span a{ display:block; width:90%; padding:0 5%; color:#FFF;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.hiPic span a:hover{ color:#FC0;}
+.hiPic em{ position:absolute;top:0; right:0;}
+.hiPic em a{ display:block; color:#FFF; padding:5px 10px; overflow:hidden;background-color: rgba(0,0,0,0.2);-moz-border-radius:0 0 0 50px;-webkit-border-radius:0 0 0 50px;-o-border-radius:0 0 0 50px;-ms-border-radius:0 0 0 50px;-khtml-border-radius:0 0 0 50px;border-radius:0 0 0 50px;}
+.hiPic em a:hover{ color:#FFF;background-color: rgba(90,205,250,0.8);*color:#555;*background-color:#FFF;}
+
+.hiName{ padding:10px;}
+.hiName dd{ float:left; width:50%; padding-top:5px; color:#999;}
+.hiName dd b{ font-weight:normal; color:#C5913A;}
+.hiName dt a{ display:block; font-size:16px; width:100%; font-weight:700;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.hiName dt a b{ font-weight:normal; font-size:12px; color:#F80; padding-left:3px;}
+.hiPhoto{ display:block; padding:0 10px; font-size:14px;}
+.hiPhoto ins{ color:#FFF; width:1em; line-height:1em; padding:3px; margin-right:5px; vertical-align:middle; background:#CCC;-moz-border-radius:30px;-webkit-border-radius:30px;-o-border-radius:30px;-ms-border-radius:30px;-khtml-border-radius:30px;border-radius:30px;}
+/*列表排列*/
+.houseListB .houseListItem,.houseListB .usedListItem{ clear:both; padding:10px; margin-bottom:20px; background:#FFF; position:relative;}
+.hiLeft{ float:left; width:230px; height:150px; overflow:hidden;}.hiLeft img{ width:100%;}
+.hiRight{ float:right; width:470px;}.hiRight a:hover{ color:#F30;}
+.hiRight h2{ clear:both; display:block; font-size:14px; margin-bottom:5px; padding-bottom:5px; font-weight:normal; border-bottom:1px dotted #DDD;}
+.hiRight h2 a{ display:block; color:#11C0D0; width:60%;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.hiRight h2 b{ font-size:14px; font-weight:normal; color:#BBB;}
+.hiRight dl{ float:left; width:330px;}
+.hiRight dd,.hiRight dt{ height:22px; line-height:22px; width:100%;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.hiRight dl em{ color:#999;}.hiRight dl em ins{ width:1em; margin-right:8px;}
+.hiRight dt a{ color:#11C0D0; margin-right:10px;}.hiRight dt a:hover,.hiRight p a:hover{text-decoration:underline;}
+.hiRight ul{ float:right; width:130px;}
+.hiRight li{ text-align:right; margin-bottom:5px;zoom:1;}.hiRight li b{ color:#F70; font-size:16px; font-weight:normal;}
+.hiRight li a{ display:block; color:#11C0D0; margin:10px 5px 0 0;*margin:0 5px 0 0;}
+.hiRight p{ float:left;padding-top:10px;zoom:1; width:330px;}
+.hiRight p a{ display:block; width:100%; color:#F70; font-size:14px;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+
+.houseListB .imgShop{ position:absolute; top:8px; right:0;}
+.houseListB .imgShop span{ float:left;*width:80px;line-height:24px;position:relative;}
+.houseListB .imgShop a{display:block; text-align:center; color:#999; padding:0 10px;}
+.houseListB .imgShop a:hover{ color:#F50;}
+.houseListB .imgShop b{ width:100%; height:0; text-align:center; line-height:100%; overflow:hidden; position:absolute;top:0; left:0; color:#F90;}
+.usedPub{ clear:both; width:90%; padding:0 5%;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.usedPub em{ margin:0 3px 0 0; color:#FFF; padding:1px 5px;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;-ms-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;}
+/*二手房服务*/
+.usedService{ clear:both;}
+.usedService ul{ width:320px;}
+.usedService li{ float:left; width:110px; margin:0 10px 10px 0;}
+.usedService li .btn{ display:block; font-size:14px; font-weight:700;}
+/*二手房改写*/
+.usedListItem .hiName dd{ float:none; clear:both; width:100%; height:24px; line-height:24px;}.usedListItem .hiName dd b{ font-size:18px;}
+.usedListItem .hiName dd strong{ font-size:22px; font-weight:normal; color:#F60; margin-left:10px;}
+.usedListItem .hiRight h2 a{ width:90%;}/*默认75%*/
+.usedListItem .hiRight dt,.usedListItem .hiRight dd{ height:28px; line-height:28px;}
+.usedListItem .hiRight dd cite{ margin-right:1px; color:#11C0D0; padding:2px 5px;}
+.usedListItem .hiRight li b{font-size:22px;}
+.houseListB .usedPub{ clear:none; width:auto; padding:0; position:absolute; top:10px;right:10px;}
+.houseListB .usedPub em{ margin:0 0 0 3px;}
+/*=====================(楼盘右侧列表)=====================*/
+/*-----伸缩模块-----*/
+#sideMenu{ clear:both; margin-bottom:20px;}
+.shMt{display: block; height:28px; line-height:28px; font-size:14px; font-weight:700; padding:5px 10px;color:#6FA63C; margin-bottom:1px; background:#F9F9F9; font-family:Arial,"宋体", sans-serif; cursor:default;}
+.shMt ins{ margin-right:5px; font-size:16px;}.shMt:hover{ color:#FFF; background:#A8D182;}
+#sideMenu .current .shMt{ color:#FFF; background:#8FC45E;}
+/*新开盘*/
+.sideNewHouse{}
+.sideNewHouse ul{ clear:both; padding:10px;}.sideNewHouse li{ clear:both;}
+.sideNewHouse li a{ float:left; height:28px; line-height:28px; width:100%; border-bottom:1px dotted #FFF;}
+.sideNewHouse li a:hover{ border-color:#DDD;}.sideNewHouse li a:hover span,.sideNewHouse li a:hover em,.sideNewHouse li a:hover b{ color:#F80;}
+.sideNewHouse li span{ float:left; width:49.5%;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.sideNewHouse li em,.sideNewHouse li b{ float:left; width:24.5%;text-align:center; color:#999;}
+.sideNewHouse li b{ text-align:right; color:#B48443;}
+/*浏览过的楼盘*/
+.sidePicHouse{ clear:both;}
+.sidePicHouse li{ clear:both; padding:10px 5px 10px 10px; border-bottom:1px solid #EEE;}.sidePicHouse li a{ float:left; width:100%;}
+.sidePicHouse li span{ float:left; width:90px; height:60px; overflow:hidden;}.sidePicHouse li span img{ width:100%;}
+.sidePicHouse li dl{ float:right; width:115px;}.sidePicHouse li dd{ color:#999; line-height:1.8em;}
+.sidePicHouse li dt{ font-size:14px; width:100%; margin-bottom:5px;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.sidePicHouse li dd b{ color:#F60;}
+	/*浏览内部推荐*/
+	.sideUpHouse{ clear:both;}
+	.sideUpHouse p{ text-align:center; display:block;}
+	.sideUpHouse p a{ display:block; height:30px; line-height:30px; font-size:15px; color:#BC4C00; background:#FFC;}
+	.sideUpHouse p a:hover{ text-decoration:underline;}
+@media only screen and (min-width:1220px){
+/*=====================(楼盘列表)=====================*/
+/*列表排列*/
+.houseListB .houseListItem,.houseListB .usedListItem{padding:20px; margin-bottom:20px;}
+.hiLeft{ width:287px; height:187px;}.hiRight{ width:550px;}
+.hiRight h2{font-size:16px; margin-bottom:8px; padding-bottom:8px;}
+.hiRight dl{ width:400px; font-size:14px;}.hiRight dd,.hiRight dt{ height:28px; line-height:28px;}
+.hiRight ul{width:150px; font-size:14px;}.hiRight li{margin-bottom:10px;}.hiRight li a{ margin-top:15px;}.hiRight li b{font-size:18px;}
+.hiRight p{ width:400px;}.hiRight p a{font-size:16px;}
+.houseListB .imgShop{top:15px; right:10px;}
+/*二手房服务*/
+.usedService li{width:135px;}
+/*二手房改写*/
+.usedListItem .hiRight dt,.usedListItem .hiRight dd{ height:36px; line-height:36px;}
+.usedPub{ top:20px;right:20px;}
+/*=====================(楼盘右侧列表)=====================*/
+/*新开盘*/
+.sideNewHouse li span{ font-size:14px;}
+/*浏览过的楼盘*/
+.sidePicHouse li span{width:110px; height:72px;}
+.sidePicHouse li dl{ width:145px;}
+.sidePicHouse li dt{ font-size:16px;}
+}

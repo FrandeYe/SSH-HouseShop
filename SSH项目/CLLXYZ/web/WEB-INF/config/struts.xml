@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<constant name="struts.custom.i18n.resources" value="message" />
+	<constant name="struts.multipart.saveDir" value="/upload" />
+	<constant name="struts.multipart.maxSize" value="104857600" />
+
+	<!-- 把Struts的Action交给Spring管理 -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<package name="base-package" extends="json-default">
+	</package>
+
+	<include file="../config/struts-admin.xml" />
+	<include file="../config/struts-agency.xml" />
+	<include file="../config/struts-activity.xml" />
+	<include file="../config/struts-appointment.xml" />
+	<include file="../config/struts-building.xml" />
+	<include file="../config/struts-buildings.xml" />
+	<include file="../config/struts-customer.xml" />
+	<include file="../config/struts-employee.xml" />
+	<include file="../config/struts-house.xml" />
+	<include file="../config/struts-customer.xml"/>
+	<include file="../config/struts-ads.xml"/>
+	<include file="../config/struts-activity.xml" />
+	<include file="../config/struts-history.xml" />
+	<include file="../config/struts-login.xml" />
+	<include file="../config/struts-like.xml" />
+	<include file="../config/struts-message.xml" />
+	<include file="../config/struts-test.xml" />
+	<include file="../config/struts-user.xml" />
+	<include file="../config/struts-comment.xml" />
+	<include file="../config/struts-mission.xml"/>
+	<include file="../config/struts-sale.xml"/>
+	<include file="../config/struts-articleType.xml"/>
+	<include file="../config/struts-article.xml"/>
+	<include file="../config/struts-room.xml"/>
+	<include file="../config/struts-buildingsImg.xml"/>
+	<include file="../config/struts-index.xml"/>
+	<include file="../config/struts-globalSearch.xml"/>
+
+</struts>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Building" table="t_building">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" />
+        <property name="total_floor"/>
+        <property name="total_lift"/>
+        <property name="floor_rooms"/>
+        <property name="total_room"/>
+        <property update="false" name="created_time"/>
+        <property name="status"/>
+        <property name="room_status"/>
+
+        <!-- 一个楼栋属于一个楼盘-->
+        <many-to-one name="buildings" column="buildings_id" class="com.ht.bean.Buildings"></many-to-one>
+
+        <!--一个楼栋属于一个经销商-->
+        <many-to-one update="false" name="agency" column="agency_id" class="com.ht.bean.Agency"></many-to-one>
+
+        <!--一个楼栋有多个房间-->
+        <!--<set name="rooms">-->
+            <!--<key column="building_id"></key>-->
+            <!--<one-to-many class="com.ht.bean.Room"></one-to-many>-->
+        <!--</set>-->
+
+    </class>
+</hibernate-mapping>

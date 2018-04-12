@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+	<package name="chen" namespace="/chen" extends="base-package">
+			<action name="*" class="chenController" method="{1}">
+				<result name="success" type="json"/>
+			</action>
+		<!--<action name="execute" class="CustomerController" method="{1}">
+			<result name="input">/agency/fileupload.jsp</result>
+		</action>-->
+	</package>
+
+	<package name="liu" namespace="/liu" extends="base-package">
+		<action name="*" class="liuController" method="{1}">
+			<result name="success" type="json"/>
+		</action>
+	</package>
+
+	<package name="ye" namespace="/ye" extends="base-package">
+		<action name="*" class="yeController" method="{1}">
+			<result name="success" type="json"/>
+		</action>
+	</package>
+
+	<package name="xie" namespace="/xie" extends="base-package">
+		<action name="*" class="xieController" method="{1}">
+			<result name="success" type="json"/>
+		</action>
+	</package>
+
+</struts>
